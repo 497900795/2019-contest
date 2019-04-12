@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>推箱子</title>
+    <style>
+       * {
+           padding: 0;
+           margin: 0;
+       }
+
+       button, input {
+           font-size: 1.2rem;
+       }
+
+        #app {
+           font-size: 1.5rem;
+           margin: 5px auto;
+           width: 700px;
+           border: 1px solid;
+           text-align: center;
+        }
+
+        #canvas {
+           margin: 5px 0;
+           width: 640px;
+           height: 640px;
+        }
+
+        #msg {
+            
+        }
+
+        #msg > p {
+           height: 2rem;
+           line-height: 2rem;
+        }
+
+        #controler {
+            
+        }
+
+        #controler > div{
+            margin: 5px auto;
+        }
+    </style>
+    <script src="js/mapdata.js"></script>
+    <script src="js/game.js"></script>
+</head>
+<body>
+    <div id="app">
+        <canvas id="canvas"></canvas>
+        <div id="msg">
+            <p class="introduce">wasd控制人物移动，人物把箱子全部推到黄色球状上即为胜利</p>
+            <p class="level-info">当前处于菜单选择页面</p>
+            <p class="difficult-info"></p>
+            <p class="move-steps"></p>
+            <p class="rest-steps"></p>
+        </div>
+        <div id="controler">
+            <div>
+                <span>跳转到第</span><input type="number" class="jmp-level"><span>关</span><button class="en-jmp">确认跳转</button>
+            </div>
+            <div>
+                <button class="pre-level">上一关</button>
+                <button class="next-level">下一关</button>
+                <button class="re-start">重玩本关</button>
+            </div>
+            <div>
+                <button class="to-difficult">难度一</button>
+                <button class="to-difficult">难度二</button>
+                <button class="to-difficult">难度三</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
